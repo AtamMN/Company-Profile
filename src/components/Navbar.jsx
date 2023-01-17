@@ -1,19 +1,40 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar(){
     const [nav, setNav] = useState();
+    const [dropshown, setDropshown] = useState(true);
+
+    function changeBackground(e) {
+        e.target.style.background = 'grey';
+    }
+
+    function revertBackground(e) {
+        e.target.style.background = 'black';
+    }
+    
 
     return (
     <div className="flex justify-between items-center w-full h-20 text-white bg-black px-4 fixed">
         <div>
-            <h1 className="text-4xl font-bold">Company</h1>
+            <h1 className="text-4xl font-bold px-3">Company</h1>
         </div>
-        <ul className="hidden md:flex gap-4">
-            <li>ABOUT</li>
-            <li>OUR WORKS</li>
-            <li>OUR TEAM</li>
-            <li>CONTACT</li>
+        <ul className="hidden md:flex gap-8 px-3">
+            <li onClick={() => setDropshown(!dropshown)} className="cursor-pointer">
+                ABOUT{dropshown && 
+                    <ul className="absolute flex flex-col bg-black mt-7">
+                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
+                            HISTORY
+                        </li>
+                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
+                            VISION MISSION
+                        </li>
+                    </ul>
+                    }
+            </li>
+            <li className="cursor-pointer">OUR WORKS</li>
+            <li className="cursor-pointer">OUR TEAM</li>
+            <li className="cursor-pointer">CONTACT</li>
         </ul>
 
 
@@ -28,7 +49,6 @@ function Navbar(){
             <li>OUR TEAM</li>
             <li>CONTACT</li>
         </ul>}
-
     </div>
     )
 }
