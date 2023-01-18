@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar(){
     const [nav, setNav] = useState();
-    const [dropshown, setDropshown] = useState(true);
+    const [dropshown, setDropshown] = useState(false);
 
     function changeBackground(e) {
         e.target.style.background = 'grey';
