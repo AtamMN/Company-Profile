@@ -1,5 +1,5 @@
 import React from "react";
-import { FaDotCircle, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 function Footer(){
     return(
