@@ -18,7 +18,7 @@ function Contact(){
             <div className="w-full">
                 <h1 className="font-bold text-lg py-10">CONTACT US</h1>
             </div>
-            <form onSubmit={handleSubmit} className="flex flex-col mx-20">
+            <form onSubmit={handleSubmit} className="flex flex-col mx-[20%]">
                 <label>
                     Name
                 </label>
@@ -33,7 +33,7 @@ function Contact(){
                 <label className="pt-4">
                     Message
                 </label>
-                <textarea  onChange={e=>setMsg(e.target.value)} cols="30" rows="10" required></textarea>
+                <textarea  onChange={e=>setMsg(e.target.value)} rows="5" required></textarea>
                 {err ? <label className="text-red-600">This field is required.</label> : ""}
                 <button className="bg-cyan-600 text-white my-2 pt-2 rounded-2xl pb-2 ">Submit</button>
             </form>

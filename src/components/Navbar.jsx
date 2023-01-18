@@ -15,18 +15,18 @@ function Navbar(){
     
 
     return (
-    <div className="flex justify-between items-center w-full h-20 text-white bg-black px-4 fixed">
+    <div className="flex justify-between items-center w-full h-20 text-white bg-black px-4 z-10 fixed">
         <div>
             <h1 className="text-4xl font-bold px-3">Company</h1>
         </div>
         <ul className="hidden md:flex gap-8 px-3">
-            <li onClick={() => setDropshown(!dropshown)} className="cursor-pointer">
+            <li onMouseOver={() => setDropshown(true)} className="cursor-pointer">
                 ABOUT{dropshown && 
-                    <ul className="absolute flex flex-col bg-black mt-7">
+                    <ul className="absolute flex flex-col bg-black mt-7" onMouseLeave={() => setDropshown(false)}>
                         <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
                             HISTORY
                         </li>
-                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
+                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} onMous   className="px-5 py-5">
                             VISION MISSION
                         </li>
                     </ul>
