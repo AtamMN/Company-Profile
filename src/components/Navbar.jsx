@@ -26,7 +26,7 @@ function Navbar(){
                         <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
                             HISTORY
                         </li>
-                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} onMous   className="px-5 py-5">
+                        <li onMouseEnter={changeBackground} onMouseLeave={revertBackground} className="px-5 py-5">
                             VISION MISSION
                         </li>
                     </ul>
